@@ -30,9 +30,8 @@ public class CommentsController {
     }
 
     @GetMapping("/by-user/{userName}")
-    public ResponseEntity<List<CommentsDto>> getAllCommentsForUser(@PathVariable String userName){
+    public ResponseEntity<List<CommentsDto>> getAllCommentsForUser(@PathVariable String userName) {
         return ResponseEntity.status(OK)
                 .body(commentService.getAllCommentsForUser(userName));
     }
-
 }
